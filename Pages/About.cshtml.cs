@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SecureCloud.Pages
 {
-    public class IndexModel : PageModel
+    public class AboutModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-        public IndexModel(ILogger<IndexModel> logger)
+
+        private readonly ILogger<AboutModel> _logger;
+        public AboutModel(ILogger<AboutModel> logger)
         {
 
             _logger = logger;

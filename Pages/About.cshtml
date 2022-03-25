@@ -1,0 +1,103 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "Über";
+}
+
+<div class="header">
+        <a href="/" class="logo">@ViewData["Title"] - SecureCloud</a>
+        <div class="header-right">
+            <a href="/files">Dateien</a>
+            <a href="/settings">Einstellungen</a>
+            <a href="/users">Benutzer</a>
+        </div>
+</div>
+
+
+<!-- Release Card -->
+<style>
+    .release-card-event.mdl-card {
+        width: 300px;
+        height: 256px;
+        background: #488FB1;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+                    
+    .release-card-event>.mdl-card__actions {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+                    
+    .release-card-event>.mdl-card__title {
+        align-items: flex-start;
+    }
+                    
+    .release-card-event>.mdl-card__title>h4 {
+        margin-top: 0;
+        font-family: 'Rubik', sans-serif;
+    }
+                    
+    .release-card-event>.mdl-card__actions {
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+    }
+                    
+    .release-card-event>.mdl-card__actions>.material-icons {
+        padding-right: 10px;
+    }
+                    
+    .release-card-event>.mdl-card__title,
+    .release-card-event>.mdl-card__actions,
+    .release-card-event>.mdl-card__actions>.mdl-button {
+        color: #fff;
+        border-radius: 20px;
+    }
+</style>
+
+<div class="release-card-event mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand">
+        <h4>
+            <b><u>SecureCloud</u></b><br>
+            <b>Version @Static.Info.Version</b> <br>
+            <b>@Static.Info.BuildDate</b><br>
+            <b>@Static.Info.Codename</b>
+
+        </h4>
+    </div>
+
+    <div class="mdl-card__actions mdl-card--border">
+        <button type="button" class="mdl-button show-modal">Auf Update überprüfen</button>
+        <dialog class="mdl-dialog" style="border-radius: 10px; width: 400px;">
+
+            <div class="mdl-dialog__content">
+                <h5>{{update_no}}</h5>
+            </div>
+
+            <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+                <button type="button" class="mdl-button close" style="border-radius: 10px;">Ok</button>
+            </div>
+
+        </dialog>
+
+        <script>
+            var dialog = document.querySelector('dialog');
+            var showModalButton = document.querySelector('.show-modal');
+            if (!dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+            }
+            showModalButton.addEventListener('click', function() {
+                dialog.showModal();
+            });
+            dialog.querySelector('.close').addEventListener('click', function() {
+                dialog.close();
+            });
+        </script>
+
+        <div class=" mdl-layout-spacer"></div>
+        <i class="material-icons ">info</i>
+    </div>
+
+</div>
+

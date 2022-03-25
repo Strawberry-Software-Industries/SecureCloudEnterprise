@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Shared\" />
+    <Content Remove="Pages\Shared\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Shared\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Shared\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Shared\Index.cshtml" />
   </ItemGroup>
 
 </Project>
