@@ -72,7 +72,7 @@
         <dialog class="mdl-dialog" style="border-radius: 10px; width: 400px;">
 
             <div class="mdl-dialog__content">
-                <h5>{{update_no}}</h5>
+                <h5>Du bist auf den aktuellsten Build!</h5>
             </div>
 
             <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
@@ -101,3 +101,61 @@
 
 </div>
 
+
+<!-- hostname Card -->
+<style>
+    .hostname-card-event.mdl-card {
+        width: 300px;
+        height: 256px;
+        background: #9254C8;
+        border-radius: 20px;
+        margin-left: 350px;
+        margin-top: -255px;
+    }
+                    
+    .hostname-card-event>.mdl-card__actions {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+                    
+    .hostname-card-event>.mdl-card__title {
+        align-items: flex-start;
+    }
+                    
+    .hostname-card-event>.mdl-card__title>h4 {
+        margin-top: 0;
+        font-family: 'Rubik', sans-serif;
+    }
+
+                    
+    .hostname-card-event>.mdl-card__actions {
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+    }
+                    
+    .hostname-card-event>.mdl-card__actions>.material-icons {
+        padding-right: 10px;
+    }
+                    
+    .hostname-card-event>.mdl-card__title,
+    .hostname-card-event>.mdl-card__actions,
+    .hostname-card-event>.mdl-card__actions>.mdl-button {
+        color: #fff;
+        border-radius: 20px;
+    }
+</style>
+
+<div class="hostname-card-event mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand">
+        <h4>
+            <b><u>Hostname</u></b>
+            <br>enterprise_release_ju-b6<br>
+        </h4>
+    </div>
+
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/">Ändern</a>
+        <div class="mdl-layout-spacer"></div>
+        <i class="material-icons">laptop</i>
+    </div>
+</div>
