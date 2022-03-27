@@ -1,11 +1,20 @@
 using static Functions.Functions;
 using Static;
 
+var IsActivated = false;
+
 Console.ForegroundColor = ConsoleColor.Green;
 Print("--  SecureCloud Launcher --");
 Console.ResetColor();
-Print("SecureCloud has started!");
-Print($"Version {Info.Version} {Info.Codename}");
+Print("SecureCloud was started!");
+Print($"SecureCloud Version {Info.Version} {Info.Codename}");
+Print("Enterprise 2022 - Evaluation License");
+
+if (IsActivated == false)
+{
+    Print("Please activate SecureCloud");
+}
+
 Print("");
 
 

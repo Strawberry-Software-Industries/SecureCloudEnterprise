@@ -23,4 +23,8 @@
     <None Include="Pages\Shared\Index.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SharpHash" Version="1.1.0" />
+  </ItemGroup>
+
 </Project>
